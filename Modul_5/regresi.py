@@ -22,12 +22,12 @@ print("Prediksi waktu muat untuk ukuran 100 MB =", y_prediction)
 # ---- Grafik ----- #
 x_line = np.linspace(min(x), x_prediction, 200)
 y_line = b0 + b1 * x_line
-
 plt.figure(figsize=(8,5))
-plt.plot(x_line, y_line, label="Garis Regresi (linear)")
-plt.scatter(x, y, marker='o', label="Titik data")
+plt.plot(x_line, y_line, color='#C19A6B', label="Garis Regresi (linear)")
+plt.scatter(x, y, color='red', marker='o', label="Titik data")
 plt.scatter([x_prediction], [y_prediction], marker='s', label=f"Prediksi {x_prediction:.0f} MB", zorder=5)
-plt.annotate(f"{y_prediction:.2f} s", (x_prediction, y_prediction), textcoords="offset points", xytext=(5,5))
+plt.annotate(f"{y_prediction:.2f} s", (x_prediction, y_prediction),
+             textcoords="offset points", xytext=(5,5))
 plt.xlabel('Ukuran aplikasi (MB)')
 plt.ylabel('Waktu muat (detik)')
 plt.title('Regresi Linear: Ukuran vs Waktu Muat')
