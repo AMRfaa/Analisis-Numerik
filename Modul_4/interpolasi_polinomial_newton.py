@@ -31,13 +31,12 @@ n_value = newton_interpolation(x, y, xp)
 print("Newton f(2.5) =", n_value)
 
 # ---- Grafik ----- #
-# buat titik untuk kurva interpolasi
 x_plot = np.linspace(min(x), max(x), 100)
 y_plot = [newton_interpolation(x, y, xi) for xi in x_plot]
 
-plt.plot(x_plot, y_plot, label="Kurva Interpolasi Newton")
-plt.scatter(x, y, color="red", label="Titik Data")
-plt.scatter(xp, n_value, color="green", label=f"f({xp}) = {n_value:.2f}")
+plt.plot(x_plot, y_plot, color='#C19A6B', label="Kurva Interpolasi Newton")
+plt.scatter(x, y, color="green", label="Titik Data")
+plt.scatter(xp, n_value, color="lime", label=f"f({xp}) = {n_value:.2f}")
 
 plt.title("Interpolasi Newton")
 plt.xlabel("x")
