@@ -25,9 +25,9 @@ print("Lagrange f(2.5) = ", L_value)
 # ---- Grafik ----- #
 x = np.array([1.0, 2.0, 3.0])
 y = np.array([3.0, 8.0, 15.0])
-plt.plot(x, y)
-plt.plot(x, y, 'bo', label='Data') # Titik data
-plt.plot(xp, L_value, 'ro', label='Perkiraan')
+plt.plot(x, y, color='silver', label='Kurva')              
+plt.scatter(x, y, color='skyblue', label='Data')          
+plt.scatter(xp, L_value, color='violet', label='Perkiraan') 
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Visualisasi Interpolasi Lagrange')
